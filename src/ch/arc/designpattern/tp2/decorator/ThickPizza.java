@@ -9,7 +9,7 @@ public class ThickPizza implements Pizza {
 	
 	@Override
 	public float getPrice() {
-		return 0;
+		return 10;
 	}
 
 	@Override
@@ -27,25 +27,25 @@ public class ThickPizza implements Pizza {
 	@Override
 	public boolean isVegetarian() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public int getSize() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 20;
 	}
 
 	@Override
 	public String getTaste() {
 		// TODO Auto-generated method stub
-		return null;
+		return "The pizza is ";
 	}
 
 	@Override
 	public String getAroma() {
 		// TODO Auto-generated method stub
-		return null;
+		return "The is aromatized with ";
 	}
 	
 	@Override
