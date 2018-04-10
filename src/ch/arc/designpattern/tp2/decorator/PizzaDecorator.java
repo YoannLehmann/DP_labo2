@@ -54,7 +54,7 @@ public abstract class PizzaDecorator implements Pizza {
 	
 	@Override
 	public String toString() {
-		return "Je suis une pizza décorée";
+		return this.decoratedPizza.toString();
 	}
 
 }
