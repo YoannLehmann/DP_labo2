@@ -1,8 +1,11 @@
 package ch.arc.designpattern.tp2.decorator;
 
+import ch.arc.designpattern.tp2.state.PizzaState;
+
 public interface Pizza {
 		
 	public int size = 0;
+	public void setPizzaState(PizzaState state);
 	public float getPrice();
 	public boolean isSpicy();
 	public float getLactose();

@@ -1,5 +1,7 @@
 package ch.arc.designpattern.tp2.decorator;
 
+import ch.arc.designpattern.tp2.state.PizzaState;
+
 public abstract class PizzaDecorator implements Pizza {
 	
 	protected final Pizza decoratedPizza;
@@ -9,6 +11,9 @@ public abstract class PizzaDecorator implements Pizza {
 		this.decoratedPizza = p;
 	}
 	
+	public void setPizzaState(PizzaState state) {
+		
+	}
 	
 	@Override
 	public float getPrice() {

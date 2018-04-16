@@ -1,19 +1,21 @@
 package ch.arc.designpattern.tp2.state;
 
+import ch.arc.designpattern.tp2.decorator.Pizza;
+
 public class CommandedState implements PizzaState {
 
 	@Override
-	public int getLactose() {
-		return 0;	// Pas de lactose, la pizza n'est pas encore préparée.
+	public float getLactose(Pizza context) {
+		return context.getLactose();	
 	}
 
 	@Override
-	public String getTaste() {
+	public String getTaste(Pizza context) {
 		return "Pas de goût";
 	}
 
 	@Override
-	public String getAroma() {
+	public String getAroma(Pizza context) {
 		return "Pas d'arôme";
 	}
 	
@@ -23,12 +25,12 @@ public class CommandedState implements PizzaState {
 	}
 
 	@Override
-	public void prepare(PizzaContext context) {
+	public void prepare(Pizza context) {
 		context.setPizzaState(new PreparedState());
 	}
 
 	@Override
-	public void cook(PizzaContext context) {
+	public void cook(Pizza context) {
 		// Exception : la pizza n'est pas préparée.
 	}
 
