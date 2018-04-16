@@ -16,6 +16,11 @@ public class CommandedState implements PizzaState {
 	public String getAroma() {
 		return "Pas d'arôme";
 	}
+	
+	@Override
+	public String toString() {
+		return "commandée";
+	}
 
 	@Override
 	public void prepare(PizzaContext context) {

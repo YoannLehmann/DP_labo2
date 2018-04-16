@@ -19,6 +19,11 @@ public class PreparedState implements PizzaState {
 	}
 
 	@Override
+	public String toString() {
+		return "préparée";
+	}
+	
+	@Override
 	public void prepare(PizzaContext context) {
 		// ne fait rien (la pizza est déjà préparée).
 	}

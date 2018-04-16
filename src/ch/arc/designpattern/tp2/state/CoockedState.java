@@ -16,6 +16,11 @@ public class CoockedState implements PizzaState {
 	public String getAroma() {
 		return null; // /!\ Doit retourner l'arôme final.
 	}
+	
+	@Override
+	public String toString() {
+		return "cuite";
+	}
 
 	@Override
 	public void prepare(PizzaContext context) {

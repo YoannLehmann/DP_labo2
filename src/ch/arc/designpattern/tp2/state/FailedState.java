@@ -21,6 +21,11 @@ public class FailedState implements PizzaState {
 	}
 
 	@Override
+	public String toString() {
+		return "ratée";
+	}
+	
+	@Override
 	public void prepare(PizzaContext context) {
 		// Exception -> la pizza est ratée.
 	}
