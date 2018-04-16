@@ -1,5 +1,6 @@
 package ch.arc.designpattern.tp2;
 
+import ch.arc.designpattern.tp2.builder.PizzaBuilder;
 import ch.arc.designpattern.tp2.decorator.Pizza;
 import ch.arc.designpattern.tp2.decorator.ThickPizza;
 import ch.arc.designpattern.tp2.decorator.ThinPizza;
@@ -41,6 +42,11 @@ public class Tester {
 		System.out.println("Price: " + pizza3.getPrice());
 		System.out.println("Size: " + pizza3.getSize() + "cm");
 		System.out.println("Lactose: " + pizza3.getLactose() + "mg");
+		
+		
+		
+		Pizza pizza4 = new PizzaBuilder().setThickness("thin").setSize(10).sauce("tomato").addIngredient("ham").getPizza();
+		System.out.println(pizza4.toString());
 		
 	}
 

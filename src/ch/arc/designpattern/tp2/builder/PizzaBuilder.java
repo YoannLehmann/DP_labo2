@@ -17,6 +17,8 @@ public class PizzaBuilder implements Builder {
 	
 	public PizzaBuilder() {
 		
+		// Default value if not indicated.
+		this.pizza = new ThinPizza();
 	}
 	
 	@Override
