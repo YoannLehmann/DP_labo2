@@ -7,7 +7,7 @@ public class ThinPizza implements Pizza {
 	@Override
 	public float getPrice() {
 		// TODO Auto-generated method stub
-		return 10;
+		return 3 + (getSize() * 0.1f);
 	}
 
 	@Override

@@ -6,7 +6,7 @@ public class ThickPizza implements Pizza {
 	
 	@Override
 	public float getPrice() {
-		return 10;
+		return 3 + (getSize() * 0.2f);
 	}
 
 	@Override

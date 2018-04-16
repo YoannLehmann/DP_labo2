@@ -1,6 +1,7 @@
 package ch.arc.designpattern.tp2.decorator;
 
 public interface Pizza {
+		
 	public int size = 0;
 	public float getPrice();
 	public boolean isSpicy();

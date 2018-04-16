@@ -48,6 +48,10 @@ public class Tester {
 		Pizza pizza4 = new PizzaBuilder().setThickness("thin").setSize(10).sauce("tomato").addIngredient("ham").getPizza();
 		System.out.println(pizza4.toString());
 		
+		Pizza margherita = new PizzaBuilder().setThickness("thin").setSize(30).sauce("tomato").addIngredient("mozzarella").getPizza();
+		Pizza profunghi  = new PizzaBuilder().setThickness("thin").setSize(30).sauce("tomato").addIngredient("mozzarella").addIngredient("ham").addIngredient("mushrooms").getPizza();
+		Pizza diavola    = new PizzaBuilder().setThickness("thin").setSize(30).sauce("tomato").addIngredient("mozzarella").addIngredient("chilli pepper").getPizza();
+		
 	}
 
 }
