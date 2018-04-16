@@ -5,36 +5,38 @@ import ch.arc.designpattern.tp2.decorator.Pizza;
 public class FailedState implements PizzaState {
 
 	@Override
-	public float getLactose(Pizza context) {		
+	public float getLactose(PizzaContext context) throws Exception{		
 		// Exception -> la pizza est ratée.
-		return 0;
+		throw new Exception("Pizza is burned");
 	}
 
 	@Override
-	public String getTaste(Pizza context) {
+	public String getTaste(PizzaContext context) throws Exception{
 		// Exception -> la pizza est ratée.
-		return null;
+		throw new Exception("Pizza is burned");
 	}
 
 	@Override
-	public String getAroma(Pizza context) {
+	public String getAroma(PizzaContext context) throws Exception{
 		// Exception -> la pizza est ratée.
-		return null;
+		throw new Exception("Pizza is burned");
 	}
 
 	@Override
 	public String toString() {
-		return "ratée";
+		return "rat�e";
 	}
 	
 	@Override
-	public void prepare(Pizza context) {
+	public void prepare(PizzaContext context) throws Exception{
 		// Exception -> la pizza est ratée.
+		throw new Exception("Pizza is burned");
 	}
 
 	@Override
-	public void cook(Pizza context) {
+	public void cook(PizzaContext context) throws Exception {
 		// Exception -> la pizza est ratée.
+		throw new Exception("Pizza is burned");
 	}
 
 }

@@ -11,6 +11,11 @@ import ch.arc.designpattern.tp2.decorator.WithMozzarella;
 import ch.arc.designpattern.tp2.decorator.WithMushrooms;
 import ch.arc.designpattern.tp2.decorator.WithSmokedSalmon;
 import ch.arc.designpattern.tp2.decorator.WithTomatoSauce;
+import ch.arc.designpattern.tp2.state.CommandedState;
+import ch.arc.designpattern.tp2.state.CoockedState;
+import ch.arc.designpattern.tp2.state.PizzaContext;
+import ch.arc.designpattern.tp2.state.PizzaState;
+import ch.arc.designpattern.tp2.state.PreparedState;
 
 public class Tester {
 
@@ -52,6 +57,27 @@ public class Tester {
 		Pizza profunghi  = new PizzaBuilder().setThickness("thin").setSize(30).sauce("tomato").addIngredient("mozzarella").addIngredient("ham").addIngredient("mushrooms").getPizza();
 		Pizza diavola    = new PizzaBuilder().setThickness("thin").setSize(30).sauce("tomato").addIngredient("mozzarella").addIngredient("chilli pepper").getPizza();
 		
+		
+		System.out.println("-----------");
+		
+		
+		PizzaContext margheritaContext = new PizzaContext(margherita);
+		
+		PizzaState commandedState = new CommandedState();
+		PizzaState preparedState = new PreparedState();
+		CoockedState coockedState = new CoockedState();
+		try {
+			System.out.println(margheritaContext.toString());
+			System.out.println(commandedState.getLactose(margheritaContext));
+			commandedState.prepare(margheritaContext);
+			System.out.println(margheritaContext.toString());
+			System.out.println(preparedState.getLactose(margheritaContext));
+			preparedState.cook(margheritaContext);
+			System.out.println(margheritaContext.toString());
+			System.out.println(coockedState.getLactose(margheritaContext));
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 }

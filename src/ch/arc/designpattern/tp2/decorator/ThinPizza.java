@@ -1,20 +1,10 @@
 package ch.arc.designpattern.tp2.decorator;
 
-import ch.arc.designpattern.tp2.state.CommandedState;
-import ch.arc.designpattern.tp2.state.PizzaState;
-
 public class ThinPizza implements Pizza {
 
 	public int size = 0;
-	public PizzaState state;
 	
-	public ThinPizza() {
-		this.state = new CommandedState();
-	}
-	
-	public void setPizzaState(PizzaState state) {
-		this.state = state;
-	}
+
 	
 	@Override
 	public float getPrice() {

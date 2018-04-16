@@ -5,33 +5,33 @@ import ch.arc.designpattern.tp2.decorator.Pizza;
 public class PreparedState implements PizzaState {
 
 	@Override
-	public float getLactose(Pizza context) {
+	public float getLactose(PizzaContext context) {
 		// TODO Auto-generated method stub
-		return context.getLactose();
+		return context.getPizza().getLactose();
 	}
 
 	@Override
-	public String getTaste(Pizza context) {
-		return "Goût pizza crue";
+	public String getTaste(PizzaContext context) {
+		return "Go�t pizza crue";
 	}
 
 	@Override
-	public String getAroma(Pizza context) {
-		return "Arôme pizza crue";
+	public String getAroma(PizzaContext context) {
+		return "Ar�me pizza crue";
 	}
 
 	@Override
 	public String toString() {
-		return "préparée";
+		return "pr�par�e";
 	}
 	
 	@Override
-	public void prepare(Pizza context) {
+	public void prepare(PizzaContext context) {
 		// ne fait rien (la pizza est déjà préparée).
 	}
 
 	@Override
-	public void cook(Pizza context) {
+	public void cook(PizzaContext context) {
 		context.setPizzaState(new CoockedState());
 	}
 }

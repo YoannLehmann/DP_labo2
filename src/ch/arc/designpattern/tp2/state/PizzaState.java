@@ -4,10 +4,10 @@ import ch.arc.designpattern.tp2.decorator.Pizza;
 
 public interface PizzaState {
 
-    public float getLactose(Pizza context);
-    public String getTaste(Pizza context);
-    public String getAroma(Pizza context);
+    public float getLactose(PizzaContext context) throws Exception;
+    public String getTaste(PizzaContext context) throws Exception;
+    public String getAroma(PizzaContext context) throws Exception;
     public String toString();
-    public void prepare(Pizza context);
-    public void cook(Pizza context);
+    public void prepare(PizzaContext context) throws Exception;
+    public void cook(PizzaContext context) throws Exception;
 }

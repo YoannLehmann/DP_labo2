@@ -5,18 +5,18 @@ import ch.arc.designpattern.tp2.decorator.Pizza;
 public class CoockedState implements PizzaState {
 
 	@Override
-	public float getLactose(Pizza context) {
-		return context.getLactose() / 2;
+	public float getLactose(PizzaContext context) {
+		return context.getPizza().getLactose() / 2;
 	}
 
 	@Override
-	public String getTaste(Pizza context) {
-		return context.getTaste();
+	public String getTaste(PizzaContext context) {
+		return context.getPizza().getTaste();
 	}
 
 	@Override
-	public String getAroma(Pizza context) {
-		return context.getAroma();
+	public String getAroma(PizzaContext context) {
+		return context.getPizza().getAroma();
 	}
 	
 	@Override
@@ -25,12 +25,13 @@ public class CoockedState implements PizzaState {
 	}
 
 	@Override
-	public void prepare(Pizza context) {
+	public void prepare(PizzaContext context) throws Exception{
+		throw new Exception("Pizza is already cooked");
 		// exception -> la pizza est déjà cuite.
 	}
 
 	@Override
-	public void cook(Pizza context) {
+	public void cook(PizzaContext context) {
 		context.setPizzaState(new FailedState());
 	}
 

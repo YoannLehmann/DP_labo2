@@ -5,32 +5,33 @@ import ch.arc.designpattern.tp2.decorator.Pizza;
 public class CommandedState implements PizzaState {
 
 	@Override
-	public float getLactose(Pizza context) {
-		return context.getLactose();	
+	public float getLactose(PizzaContext context) {
+		return 0;	
 	}
 
 	@Override
-	public String getTaste(Pizza context) {
-		return "Pas de go√ªt";
+	public String getTaste(PizzaContext context) {
+		return "Pas de go˚t";
 	}
 
 	@Override
-	public String getAroma(Pizza context) {
-		return "Pas d'ar√¥me";
+	public String getAroma(PizzaContext context) {
+		return "Pas d'arÙme";
 	}
 	
 	@Override
 	public String toString() {
-		return "command√©e";
+		return "commandÈe";
 	}
 
 	@Override
-	public void prepare(Pizza context) {
+	public void prepare(PizzaContext context) {
 		context.setPizzaState(new PreparedState());
 	}
 
 	@Override
-	public void cook(Pizza context) {
+	public void cook(PizzaContext context) throws Exception {
+		throw new Exception("Pizza is not prepared");
 		// Exception : la pizza n'est pas pr√©par√©e.
 	}
 
