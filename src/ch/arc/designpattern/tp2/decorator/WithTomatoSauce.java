@@ -21,11 +21,11 @@ public class WithTomatoSauce extends PizzaDecorator {
 	@Override
 	public String getAroma() {
 		// TODO Auto-generated method stub
-		return this.decoratedPizza.getAroma() + " ";
+		return this.decoratedPizza.getAroma() + " a good taste of tomato";
 	}
 	
 	@Override
 	public String toString() {
-		return this.decoratedPizza.toString() + " with tomato";
+		return this.decoratedPizza.toString() + " tomato sauce";
 	}
 }

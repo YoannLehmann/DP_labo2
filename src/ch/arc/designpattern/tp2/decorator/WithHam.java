@@ -32,6 +32,6 @@ public class WithHam extends PizzaDecorator {
 	
 	@Override
 	public String toString() {
-		return this.decoratedPizza.toString() + " with ham";
+		return this.decoratedPizza.toString() + " ham";
 	}
 }

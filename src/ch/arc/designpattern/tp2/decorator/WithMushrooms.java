@@ -21,11 +21,11 @@ public class WithMushrooms extends PizzaDecorator {
 	@Override
 	public String getAroma() {
 		// TODO Auto-generated method stub
-		return this.decoratedPizza.getAroma() + " ";
+		return this.decoratedPizza.getAroma() + " a good taste of mushrooms";
 	}
 	
 	@Override
 	public String toString() {
-		return this.decoratedPizza.toString() + " with mushrooms";
+		return this.decoratedPizza.toString() + " mushrooms";
 	}
 }

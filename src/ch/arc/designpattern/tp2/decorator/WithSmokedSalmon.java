@@ -26,11 +26,11 @@ public class WithSmokedSalmon extends PizzaDecorator {
 	@Override
 	public String getAroma() {
 		// TODO Auto-generated method stub
-		return this.decoratedPizza.getAroma() + " ";
+		return this.decoratedPizza.getAroma() + " a good taste of salmon";
 	}
 	
 	@Override
 	public String toString() {
-		return this.decoratedPizza.toString() + " with salmon";
+		return this.decoratedPizza.toString() + " salmon";
 	}
 }

@@ -5,7 +5,7 @@ public class ThinPizza implements Pizza {
 	@Override
 	public float getPrice() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 10;
 	}
 
 	@Override
@@ -29,24 +29,24 @@ public class ThinPizza implements Pizza {
 	@Override
 	public int getSize() {
 		// TODO Auto-generated method stub
-		return 0;
+		return 20;
 	}
 
 	@Override
 	public String getTaste() {
 		// TODO Auto-generated method stub
-		return null;
+		return "The pizza is";
 	}
 
 	@Override
 	public String getAroma() {
 		// TODO Auto-generated method stub
-		return null;
+		return "The aroma is";
 	}
 	
 	@Override
 	public String toString() {
-		return "I'm a thin pizza";
+		return "I'm a thin pizza with";
 	}
 
 }

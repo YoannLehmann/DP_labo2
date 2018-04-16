@@ -33,6 +33,6 @@ public class WithChiliPepper extends PizzaDecorator {
 	
 	@Override
 	public String toString() {
-		return this.decoratedPizza.toString() + " with chili pepper";
+		return this.decoratedPizza.toString() + " chili pepper";
 	}
 }

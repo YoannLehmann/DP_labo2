@@ -39,18 +39,18 @@ public class ThickPizza implements Pizza {
 	@Override
 	public String getTaste() {
 		// TODO Auto-generated method stub
-		return "The pizza is ";
+		return "The pizza is";
 	}
 
 	@Override
 	public String getAroma() {
 		// TODO Auto-generated method stub
-		return "The is aromatized with ";
+		return "The aroma is";
 	}
 	
 	@Override
 	public String toString() {
-		return "I'm a thick pizza";
+		return "I'm a thick pizza with";
 	}
 
 }

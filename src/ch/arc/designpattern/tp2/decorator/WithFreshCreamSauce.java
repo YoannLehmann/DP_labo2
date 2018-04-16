@@ -32,6 +32,6 @@ public class WithFreshCreamSauce extends PizzaDecorator {
 	
 	@Override
 	public String toString() {
-		return this.decoratedPizza.toString() + " with cream sauce";
+		return this.decoratedPizza.toString() + " cream sauce";
 	}
 }

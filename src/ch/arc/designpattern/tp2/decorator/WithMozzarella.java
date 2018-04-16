@@ -20,6 +20,6 @@ public class WithMozzarella extends PizzaDecorator {
 	
 	@Override
 	public String toString() {
-		return this.decoratedPizza.toString() + " with mozzarella";
+		return this.decoratedPizza.toString() + " mozzarella";
 	}
 }
