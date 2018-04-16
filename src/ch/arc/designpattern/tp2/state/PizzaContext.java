@@ -7,7 +7,7 @@ public class PizzaContext {
 		this.state = new CommandedState();
 	}
 	
-	void setPizzaState(PizzaState state) {
+	public void setPizzaState(PizzaState state) {
 		this.state = state;
 	}
 	
