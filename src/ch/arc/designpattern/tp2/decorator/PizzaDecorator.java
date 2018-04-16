@@ -39,6 +39,11 @@ public abstract class PizzaDecorator implements Pizza {
 		// TODO Auto-generated method stub
 		return this.decoratedPizza.getSize();
 	}
+	
+	@Override
+	public void setSize(int size) {
+		this.decoratedPizza.setSize(size);
+	}
 
 	@Override
 	public String getTaste() {

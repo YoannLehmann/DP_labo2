@@ -7,7 +7,9 @@ public interface Pizza {
 	public float getLactose();
 	public boolean isVegetarian();
 	public int getSize();
+	public void setSize(int size);
 	public String getTaste();
 	public String getAroma();
 	public String toString();
+	
 }

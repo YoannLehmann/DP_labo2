@@ -2,10 +2,7 @@ package ch.arc.designpattern.tp2.decorator;
 
 public class ThickPizza implements Pizza {
 
-	
-	public ThickPizza() {
-		
-	}
+	public int size = 0;
 	
 	@Override
 	public float getPrice() {
@@ -36,6 +33,10 @@ public class ThickPizza implements Pizza {
 		return 20;
 	}
 
+	public void setSize(int size) {
+		this.size = size;
+	}
+	
 	@Override
 	public String getTaste() {
 		// TODO Auto-generated method stub
