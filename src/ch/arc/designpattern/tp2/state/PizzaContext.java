@@ -8,7 +8,7 @@ public class PizzaContext {
 	
 	public PizzaContext(Pizza pizza) {
 		this.pizza = pizza;
-		this.state = new CommandedState();
+		this.state = new OrderedState();
 	}
 	
 	public PizzaState getState() {

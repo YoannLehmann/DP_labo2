@@ -11,7 +11,7 @@ import ch.arc.designpattern.tp2.decorator.WithMozzarella;
 import ch.arc.designpattern.tp2.decorator.WithMushrooms;
 import ch.arc.designpattern.tp2.decorator.WithSmokedSalmon;
 import ch.arc.designpattern.tp2.decorator.WithTomatoSauce;
-import ch.arc.designpattern.tp2.state.CommandedState;
+import ch.arc.designpattern.tp2.state.OrderedState;
 import ch.arc.designpattern.tp2.state.CoockedState;
 import ch.arc.designpattern.tp2.state.PizzaContext;
 import ch.arc.designpattern.tp2.state.PizzaState;
@@ -20,6 +20,8 @@ import ch.arc.designpattern.tp2.state.PreparedState;
 public class Tester {
 
 	public static void main(String[] args) {
+		
+		// Part 1) Decorator pattern.
 		Pizza pizza = new WithHam(new WithMozzarella(new WithTomatoSauce(new ThickPizza())));
 		Pizza pizza2 = new WithMushrooms(new WithSmokedSalmon(new WithMozzarella(new WithTomatoSauce(new ThinPizza()))));
 		Pizza pizza3 = new WithMushrooms(new WithChiliPepper(new WithMozzarella(new WithFreshCreamSauce(new ThickPizza()))));
@@ -49,7 +51,7 @@ public class Tester {
 		System.out.println("Lactose: " + pizza3.getLactose() + "mg");
 		
 		
-		
+		// Part 2) Builder pattern.
 		Pizza pizza4 = new PizzaBuilder().setThickness("thin").setSize(10).sauce("tomato").addIngredient("ham").getPizza();
 		System.out.println(pizza4.toString());
 		
@@ -58,14 +60,12 @@ public class Tester {
 		Pizza diavola    = new PizzaBuilder().setThickness("thin").setSize(30).sauce("tomato").addIngredient("mozzarella").addIngredient("chilli pepper").getPizza();
 		
 		
-		System.out.println("-----------");
+		// Part 3) State pattern.
+		PizzaContext 	margheritaContext = new PizzaContext(margherita);
+		PizzaState 		commandedState = new OrderedState();
+		PizzaState 		preparedState = new PreparedState();
+		CoockedState 	coockedState = new CoockedState();
 		
-		
-		PizzaContext margheritaContext = new PizzaContext(margherita);
-		
-		PizzaState commandedState = new CommandedState();
-		PizzaState preparedState = new PreparedState();
-		CoockedState coockedState = new CoockedState();
 		try {
 			System.out.println(margheritaContext.toString());
 			System.out.println(commandedState.getLactose(margheritaContext));

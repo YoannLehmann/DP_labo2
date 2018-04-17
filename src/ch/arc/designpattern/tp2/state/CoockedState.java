@@ -1,7 +1,5 @@
 package ch.arc.designpattern.tp2.state;
 
-import ch.arc.designpattern.tp2.decorator.Pizza;
-
 public class CoockedState implements PizzaState {
 
 	@Override
@@ -27,7 +25,6 @@ public class CoockedState implements PizzaState {
 	@Override
 	public void prepare(PizzaContext context) throws Exception{
 		throw new Exception("Pizza is already cooked");
-		// exception -> la pizza est déjà cuite.
 	}
 
 	@Override
